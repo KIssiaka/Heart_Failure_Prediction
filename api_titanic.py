@@ -12,6 +12,7 @@ from pydantic import BaseModel
 # Charger le modèle XGBoost depuis le fichier Joblib
 model = joblib.load("mon_model.joblib")
 
+#1
 
 class User(BaseModel):
     age: int
