@@ -8,6 +8,7 @@ import xgboost as xgb
 from typing import Optional, List
 from pydantic import BaseModel
 
+
 # Charger le modèle XGBoost depuis le fichier Joblib
 model = joblib.load("mon_model.joblib")
 
@@ -54,7 +55,7 @@ async def get_root():
     return {"hello world"}
 
 
-@app.get("/heart_failure")
+@app.get("/get")
 async def func():
     return user
 
@@ -76,18 +77,6 @@ async def prediction_api(user: User):
 
     except Exception as e:
         return {"error": str(e)}
-
-
-# URL de votre serveur FastAPI
-# api_url = "http://127.0.0.1:8000/heart_failure"
-
-# Données de test pour la prédiction
-
-# Faites une requête POST pour obtenir la prédiction
-# response = requests.get(api_url, params=data)
-
-# Afficher la réponse
-# print(response.json())
 
 
 if __name__ == "__main__":
