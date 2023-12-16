@@ -8,4 +8,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-CMD [ "python", "./api_titanic.py" ]
+CMD [ "python", "./api.py" ]
